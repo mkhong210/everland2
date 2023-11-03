@@ -1,0 +1,137 @@
+main{
+	.card_content{
+		.tab_menu{
+			width: 90%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 auto;
+			.tabkey{
+				cursor: pointer;
+				font-size: 2rem;
+				border-radius: 30px;
+				padding:6px 30px;
+				margin: 10px;
+				color: #808080;
+				background-color: #f2f2f2;
+				font-weight: bold;
+				&:hover{
+					color: #000;
+					background-color: #ffe402;
+				}
+				&.active{
+					color: #000;
+					background-color: #ffe402;
+				}
+			}
+		}
+		p{
+			width: 100%;
+			border-bottom: 2px solid #ddd;
+			margin: 40px 0;
+		}
+
+		.card_list {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			li {
+				width: 25%;
+				list-style: none;
+				figure {
+					margin: 25px 20px;
+					img {
+						width: 100%;
+					}
+					figcaption {
+						text-align: center;
+						font-size: 1.4rem;
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+	
+		.card_butt {
+			width: 100%;
+			text-align: center;
+			button {
+				width: 150px;
+				padding: 10px 0;
+				font-size: 18px;
+				background-color: #ffe402;
+				border: none;
+				border-radius: 30px;
+			}
+		}
+	}
+}
+
+
+//----------------------991---------------------
+
+@media screen and (max-width: 991px) {
+	main{
+		.card_content{
+			.tab_menu{
+				.tabkey{
+						font-size: 1.5rem;
+				}
+			}
+
+		}
+	}
+}
+
+//----------------------768---------------------
+@media screen and (max-width: 768px) {
+	main{
+		.card_content{
+			.tab_menu{
+				.tabkey{
+					font-size: 2rem;
+				}
+			}
+			.card_list{
+
+				li{
+					width: 33%;
+					margin: 0;
+					figure{
+						figcaption{
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----------------------480---------------------
+@media screen and (max-width: 480px) {
+	main{
+		.card_content{
+			.tab_menu{
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				justify-content: normal;
+				.tabkey{
+					font-size: 2rem;
+					flex-shrink: 0;
+				}
+			}
+			.card_list{
+				li{
+					width: 50%;
+					figure{
+						figcaption{
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,222 @@
+main {
+	.show_list {
+		>h2 {
+			font-size: 4rem;
+			font-weight: bold;
+			text-align: center;
+			margin: 100px 0 80px;
+		}
+
+		>.show_schd {
+			>li {
+				margin: 10px 0;
+				padding: 20px 40px;
+				border: 1px solid #EAEAEA;
+				display: flex;
+				align-items: center;
+				list-style: none;
+
+				>p {
+					width: 550px;
+					min-width: 400px;
+					flex: 1;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				>.show_tit {
+					margin-left: 60px;
+					font-size: 1.6rem;
+					position: relative;
+					width: 35%;
+
+					>h2 {
+						font-size: 2.6rem;
+						font-weight: bold;
+						margin-bottom: 20px;
+					}
+
+					>p {
+						color: #666666;
+						margin-bottom: 30px;
+						font-size: 1.4rem;
+					}
+
+					.show_place {
+						margin-bottom: 8px;
+
+						b {
+							font-weight: bold;
+						}
+
+						span {
+							color: #666666;
+							margin-left: 20px;
+						}
+					}
+
+					.detail_btn {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						text-decoration: none;
+						color: black;
+						background-color: #FFE402;
+						padding: 5px 20px;
+						border-radius: 30px;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal_wrap {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  opacity: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  overflow-y: auto;
+	&.open {
+		opacity: 1;
+		display: block;
+	}
+	.modal_sec {
+		background: #fff;
+		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
+		max-width: 1000px;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: auto;
+		margin: 100px auto;
+		border-radius: 15px;
+		.modal_header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 30px 50px;
+			.modalTitle {
+				font-size: 3.6rem;
+				font-weight: bold;
+			}
+			.close {
+				font-size: 3rem;
+				color: #333;
+				cursor: pointer;
+				font-weight: bold;
+			}
+		}
+		.pic {
+			margin-bottom: 40px;
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		.caption {
+			margin: 0 80px;
+			text-align: left;
+			margin-bottom: 60px;
+			.modalLoca, .modalDate, .modalTime{
+				font-size: 1.8rem;
+				margin-bottom: 10px;
+			}
+			.modalTime {
+				margin-bottom: 20px;
+			}
+			.modalDesc {
+				font-size: 2.4rem;
+				font-weight: 600;
+				line-height: 1.6;
+				margin-bottom: 30px;
+			}
+			.modalKey {
+				font-size: 1.8rem;
+				margin-bottom: 20px;
+			}
+			.modalInfo {
+				font-size: 1.8rem;
+				margin-bottom: 20px;
+			}
+			.modalAtten {
+				background-color: #004EA1;
+				font-size: 1.6rem;
+				color: #fff;
+				padding: 30px;
+				font-weight: 200;
+			}
+		}
+	}
+}
+
+//----------------------991---------------------
+
+@media screen and (max-width: 991px) {
+	main {
+		.show_list {
+			>.show_schd {
+				>li {
+					p {
+						width: auto;
+						min-width: auto;
+
+						img {
+							width: 90%;
+						}
+					}
+
+					>.show_tit {
+						width: 45%;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//----------------------768---------------------
+@media screen and (max-width: 768px) {
+	main {
+		>.show_list {
+			>.show_schd {
+				>li {
+					flex-direction: column;
+					padding: 20px;
+
+					>p {
+
+						img {
+							width: 100%;
+						}
+					}
+
+					>.show_tit {
+						margin: 0;
+						width: 100%;
+						padding: 20px 10px 10px;
+
+						.detail_btn {
+							padding: 10px 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//----------------------480---------------------
+@media screen and (max-width: 480px) {}

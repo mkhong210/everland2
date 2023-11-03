@@ -1,0 +1,251 @@
+@import "../common/_reset";
+
+// tab_menu
+.tab_menu{
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	.tabkey{
+		cursor: pointer;
+		font-size: 2.4rem;
+		border-radius: 30px;
+		padding:6px 30px;
+		margin: 10px;
+		color: #808080;
+		background-color: #f2f2f2;
+		font-weight: bold;
+		&:hover{
+			color: #000;
+			background-color: #ffe402;
+		}
+		&.active{
+			color: #000;
+			background-color: #ffe402;
+		}
+	}
+}
+.inner_c {
+	.line{
+		width: 100%;
+		border-bottom: 2px solid #ddd;
+		margin: 40px 0;
+	}
+}
+
+// list
+.list_wrap {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	>li {
+		width: calc((100% - 100px) / 3);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		border-radius: 15px;
+		margin-bottom: 30px;
+		overflow: hidden;
+		cursor: pointer;
+		.img_area {
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				padding-bottom: 55%;
+			}
+			.list_wrap > li .img_area img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		.txt_area {
+			padding: 20px;
+			b {
+				font-weight: bold;
+				font-size: 2rem;
+			}
+			p {
+				margin-top: 10px;
+				font-size: 1.4rem;
+				color: #666;
+			}
+		}
+	}
+}
+
+// modal 
+.modal_wrap {
+	position: fixed;
+	left: 0px; top: 0px;
+	z-index: 100;
+	width: 100%;
+  height: 100vh;
+	text-align: center;
+	// cursor: pointer;
+	opacity: 0; 
+	display:none;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  overflow-y: auto;
+	&.open {
+		opacity: 1;
+		display: block;
+		transition: all 0.5s;
+		.modal_sec {
+			transform: translateY(0);
+		}
+	}
+	// .bg {
+	// 	position:absolute;
+	// 	left:0;top:0;
+	// 	width:100%;
+	// 	height:100%;
+	// 	background:rgba(0,0,0,0.6);
+	// }
+	.inner_m {
+		padding: 0 30px;
+		max-width: 1060px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.modal_sec {
+		transition: all 0.5s;
+		transform: translateY(50%);
+		background: #fff;
+		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: auto;
+		margin: 100px auto;
+		border-radius: 15px;
+		.modal_header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 30px 50px;
+			.modalTitle {
+				font-size: 3.6rem;
+				font-weight: bold;
+			}
+			.close {
+				font-size: 3rem;
+				color: #333;
+				cursor: pointer;
+				font-weight: bold;
+			}
+		}
+		.pic {
+			margin-bottom: 40px;
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		.caption {
+			margin: 0 80px;
+			text-align: left;
+			margin-bottom: 60px;
+			.modalLoca {
+				font-size: 1.6rem;
+				margin-bottom: 10px;
+			}
+			.modalDesc {
+				font-size: 2.4rem;
+				font-weight: 600;
+				line-height: 1.6;
+				margin-bottom: 40px;
+			}
+			.modalKey {
+				font-size: 1.8rem;
+				margin-bottom: 20px;
+			}
+			.modalInfo {
+				font-size: 1.8rem;
+				margin-bottom: 20px;
+			}
+			.modalAtten {
+				background-color: #004EA1;
+				font-size: 1.6rem;
+				color: #fff;
+				padding: 30px;
+				font-weight: 200;
+			}
+			.modalEvent {
+				font-size: 1.8rem;
+				margin-bottom: 40px;
+			}
+			.modalMainmenu, .modalMenu {
+				font-size: 1.8rem;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@import '_attraction';
+@import '_course';
+@import '_view';
+
+
+@media screen and (max-width: 991px){
+	.tab_menu .tabkey {
+    font-size: 1.5rem;
+  }
+  .list_wrap {
+    // display: flex;
+    gap: 0;
+    >li {
+      width: 43%;
+      margin: 20px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+	.tab_menu .tabkey {
+    font-size: 2rem;
+  }
+	.list_wrap > li .txt_area p {
+    font-size: 1.6rem;
+  }
+	.modal_wrap {
+		.inner_m {
+			padding: 0 30px;
+			max-width: 1060px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.modal_sec .caption {
+			margin: 0 40px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 480px){
+	.tab_menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: normal;
+		.tabkey {
+			font-size: 2rem;
+			flex-shrink: 0;
+		}
+  }
+  .list_wrap {
+    gap: 0;
+    >li {
+      width: 80%;
+      margin: 20px auto;
+    }
+  }
+}
+

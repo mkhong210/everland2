@@ -1,0 +1,72 @@
+main {
+	.promt_list {
+		font-size: 1.5rem;
+		.promotion {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0;
+			max-width: 1200px;
+			margin: 0 auto;
+			li {
+				a{display: block;}
+				width: 25%;
+				list-style: none;
+				border: 1px solid #EAEAEA;
+				figure {
+					margin: 0;
+					padding: 10px;
+					img {
+						width: 100%;
+						border: 1px solid #EAEAEA;
+					}
+				}
+				div {
+					padding: 10px;
+					span {
+						display: block;
+						margin-bottom: 8px;
+						font-size: 12px;
+						color: #666666;
+					}
+					b {
+						color: #333333;
+						font-weight: bold;
+					}
+					p {
+						margin-top: 14px;
+						font-size: 12px;
+						color: #333333;
+					}
+				}
+			}
+		}
+	}
+}
+
+//----------------------991---------------------
+
+@media screen and (max-width: 991px) {
+
+}
+
+//----------------------768---------------------
+@media screen and (max-width: 768px) {
+	body,html{
+		font-size: 6px !important;
+	}
+
+	main{
+		.promt_list{
+			.promotion{
+				li{
+					width: 50%;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+//----------------------480---------------------
+@media screen and (max-width: 480px) {
+
+}

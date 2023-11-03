@@ -1,0 +1,162 @@
+main {
+	.course_list {
+		.course_wrap {
+			width: 100%;
+
+			>li {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 40px;
+				border-radius: 10px;
+				margin-bottom: 60px;
+				box-shadow: 5px 5px 15px 0px rgb(204, 204, 204);
+
+				&:nth-of-type(1) {
+					border: 1px solid #1B9AEF;
+					background-color: #F2FAFD;
+
+					.course_name {
+						>span {
+							color: #9CC9FF;
+						}
+
+						>h2 {
+							color: #1390FC;
+						}
+					}
+				}
+
+				&:nth-of-type(2) {
+					border: 1px solid #F5700B;
+					background-color: #FFF8F5;
+
+					.course_name {
+						>span {
+							color: #F7CBA3;
+						}
+
+						>h2 {
+							color: #FB5B05;
+						}
+					}
+				}
+
+				&:nth-of-type(3) {
+					border: 1px solid #764EA7;
+					background-color: #F9F6FF;
+
+					.course_name {
+						>span {
+							color: #BABFF6;
+						}
+
+						>h2 {
+							color: #764EA7;
+						}
+					}
+				}
+
+				&:nth-of-type(4) {
+					border: 1px solid #398E3D;
+					background-color: #F8FFF7;
+
+					.course_name {
+						>span {
+							color: #A7CAA9;
+						}
+
+						>h2 {
+							color: #4C9251;
+						}
+					}
+				}
+
+				.course_name {
+					display: flex;
+
+					>span {
+						font-size: 3.2rem;
+						font-weight: bold;
+						margin-right: 20px;
+					}
+
+					>h2 {
+						font-size: 3.4rem;
+						font-weight: bold;
+
+						>span {
+							font-size: 2.4rem;
+							font-weight: normal;
+							color: #B5C1F3;
+						}
+					}
+				}
+			}
+
+			figure {
+				width: 60%;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 786px) {
+	main {
+		.course_list {
+			.course_wrap {
+				>li {
+					display: flex;
+					flex-direction: column;
+					// &:nth-of-type(3) {
+					// 	.course_name {
+					// 		>span {
+					// 			font-size: 3rem;
+					// 		}
+					// 	}
+					// }
+				figure {
+					width: 90%;
+				}
+			}
+		}
+	}
+}
+}
+
+@media screen and (max-width: 480px) {
+
+	main {
+		.course_list {
+			.course_wrap {
+				>li {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					padding: 20px;
+					.course_name {
+						>h2 {
+							font-size: 2.8rem;
+						}
+					}
+					.course_name {
+						>h2 {
+							>span {
+								font-size: 2rem;
+							}
+						}
+					}
+				}
+				figure {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

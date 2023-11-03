@@ -1,0 +1,129 @@
+
+main {
+	.usecharge{
+		.table {
+			margin: 0	auto;
+			max-width: 1000px;
+		}
+		.day{
+			font-size: 1.5rem;
+			text-align: right;
+			margin-bottom: 15px;
+		}
+		table{
+			width: 100%;
+			thead {
+				background-color: #7FCFF4;
+				border-top: 2px solid #004ea1;
+				tr {
+					font-size: 1.8rem;
+					th{
+						font-weight: bold;
+						padding: 35px;
+					}
+				}
+			}
+			tbody{
+				
+				tr{
+					text-align: center;
+					border-bottom: 2px solid #EAEAEA;
+					&:nth-of-type(2){
+						border-bottom: 2px solid #333333;
+					}
+					td{
+						font-size: 1.5rem;
+						padding: 30px;
+						&:nth-child(1){
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+		.usecharge_mobile {
+			display: none;
+			ul {
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				li {
+					width: 45%;
+					border: 1px solid #999999;
+					margin: 10px;
+					h2 {
+						background-color: #7FCFF4;
+						text-align: center;
+						padding: 15px;
+						font-size: 2rem;
+						font-weight: bold;
+					}
+					.charge_content {
+						text-align: center;
+						padding: 40px 20px;
+						p {
+							font-size: 1.8rem;
+							b {
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.advice{
+			font-size: 1.5rem;
+			padding: 15px 0;
+		}
+	}
+	.membership{
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+		text-align: center;
+	}
+	
+}
+
+//----------------------991---------------------
+
+@media screen and (max-width: 991px) {
+	// main{
+	// 	.usecharge{
+	// 		table{
+	// 			thead{
+	// 				tr{
+	// 					th{
+	// 						padding: 25px 10px;
+	// 					}
+	// 				}
+	// 			}
+	// 			tbody{
+	// 				tr{
+	// 					td{
+	// 						padding: 30px 10px;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+//----------------------768---------------------
+@media screen and (max-width: 768px) {
+	main .usecharge{
+		table {
+			display: none;
+		}
+		.usecharge_mobile {
+			display: block;
+		}
+	}
+}
+//----------------------480---------------------
+@media screen and (max-width: 480px) {
+
+	
+}

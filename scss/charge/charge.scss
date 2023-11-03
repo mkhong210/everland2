@@ -1,0 +1,56 @@
+@import '_card';
+@import '_promotion';
+@import '_usecharge';
+@import '_seasonticket';
+@import '../common/_reset';
+
+// _detail.html
+.detail_promt {
+	h2 {
+		font-size: 4rem;
+		font-weight: bold;
+		text-align: center;
+		margin: 100px 0 80px;
+	}
+	.titline {
+		border-top: 2px solid #004ea1;
+		border-bottom: 1px solid #d9d9d9;
+		font-size: 1.5rem;
+		padding: 20px 20px;
+		display: flex;
+		justify-content: space-between;
+		>p {
+			display: flex;
+			flex: 1;
+			>span {
+				display: block;
+				&:nth-of-type(1) {
+					margin-right: 60px;
+				}
+				&:nth-of-type(2) {
+					flex: 1;
+				}
+			}
+		}
+	}
+	figure {
+		max-width: 800px;
+		margin: 40px auto 80px;
+		img {
+			width: 100%;
+		}
+	}
+	.btn {
+		text-align: center;
+		>a {
+			background-color: #004ea1;
+			color: white;
+			border: none;
+			border-radius: 30px;
+			padding: 10px 40px;
+			display: inline-block;
+			margin: 0 auto;
+			font-size: 1.7rem;
+		}
+	}
+}

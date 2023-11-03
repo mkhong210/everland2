@@ -1,0 +1,19 @@
+@mixin flex($jc:flex-start, $ai:center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+	@content;
+}
+@mixin posi($p:relative, $t:0, $l:0) {
+	position: $p;
+	top: $t;
+	left: $l;
+	@content;
+}
+// undefined
+@mixin posibr($pb:relative, $tb:0, $lb:0) {
+	position: $pb;
+	bottom: $tb;
+	right: $lb;
+	@content;
+}
