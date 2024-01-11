@@ -648,7 +648,7 @@ footer .footer_btm .btm_right a::after {
   display: block;
   padding-bottom: 55%;
 }
-.list_wrap > li .img_area .list_wrap > li .img_area img {
+.list_wrap > li .img_area img {
   position: absolute;
   top: 0;
   left: 0;

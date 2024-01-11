@@ -14,16 +14,6 @@ section {
 	}
 }
 
-html {
-	font-family: 'Noto Sans KR', sans-serif;
-}
-
-.gnb{
-	li{
-		a{	
-		}
-	}
-}
 
 .fp-watermark {
 	opacity: 0;
@@ -49,6 +39,7 @@ html {
 	/* 또는 적절한 높이 값 */
 }
 
+// section1
 .section1 {
 	.swiper {
 		height: 100vh;
@@ -196,7 +187,7 @@ html {
 	}
 }
 
-
+// section2
 .section2 {
 	&.active{
 		.inner{
@@ -352,8 +343,11 @@ html {
 	}
 }
 
-
+// section3
 .section3 {
+	h2 {
+		color: #fff;
+	}
 	.filter{
 		z-index: -1;
 		position: absolute;
@@ -456,7 +450,7 @@ html {
 	}
 }
 
-
+// section4
 .section4 {
 	overflow: hidden;
 	.inner {

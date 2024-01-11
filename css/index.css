@@ -607,10 +607,6 @@ section h2 {
   font-weight: bold;
 }
 
-html {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
 .fp-watermark {
   opacity: 0;
 }
@@ -895,6 +891,9 @@ html {
   z-index: 100;
 }
 
+.section3 h2 {
+  color: #fff;
+}
 .section3 .filter {
   z-index: -1;
   position: absolute;
