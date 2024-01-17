@@ -14,7 +14,3 @@ javascript / jquery / scss / github / visual studio code
 ## 팀원 - 4명
 임채민, 김도예, 김주선, 홍민경 
 
-## 이미지 출력 (레파지토리 경로)
-<img src="깃에 있는 이미지">
-
-<a href = "http://naver.com"> 바로가기 </a>
