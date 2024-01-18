@@ -532,8 +532,11 @@ section {
 	}
 }
 
-
+// section5
 .section5 {
+	h2{
+		color: #fff;
+	}
 	&.active{
 		h2{
 			&.active{

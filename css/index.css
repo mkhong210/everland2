@@ -1057,6 +1057,9 @@ section h2 {
   background-image: url(../asset/image/enjoy/ENJOY_view08.jpg);
 }
 
+.section5 h2 {
+  color: #fff;
+}
 .section5.active h2.active {
   color: white;
 }
